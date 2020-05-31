@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void GmailIntent(){
-        String mailList = "ericmenis00@gmail.com";
+        String mailList = "ericmenistr@gmail.com";
         String[] mail = mailList.split(",");
 
         Intent i = new Intent(Intent.ACTION_SEND);
