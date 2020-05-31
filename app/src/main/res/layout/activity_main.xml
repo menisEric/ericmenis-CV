@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="80dp"
+                />
+
+            <TextView
+                android:id="@+id/titleAplicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Curriculum Vitae"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/primaryText"/>
+
+            <ImageView
+                android:id="@+id/fotoPerfil"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/fotomia"/>
+            
+            <TextView
+                android:id="@+id/nombreapellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:text="Eric Leonel Menis"
+                android:layout_below="@+id/titleAplicacion"
+                android:layout_marginTop="40dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/texticon"
+                />
+
+            <TextView
+                android:id="@+id/titleEdad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombreapellido"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="158dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Edad:"
+                android:textColor="@color/texticon"/>
+
+            <TextView
+                android:id="@+id/textEdad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nombreapellido"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="130dp"
+                android:textSize="18dp"
+                android:textColor="@color/texticon"
+                android:text="22"/>
+
+            <TextView
+                android:id="@+id/titleLocalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleEdad"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="120dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Localidad:"
+                android:textColor="@color/texticon"/>
+
+            <TextView
+                android:id="@+id/textLocalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textEdad"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:textSize="18dp"
+                android:textColor="@color/texticon"
+                android:text="Moron"/>
+
+            <TextView
+                android:id="@+id/titleTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleLocalidad"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="172dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/texticon"
+                android:text="Tel:"/>
+
+            <TextView
+                android:id="@+id/textTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textLocalidad"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="65dp"
+                android:textSize="18dp"
+                android:textColor="@color/texticon"
+                android:text="1150050241"/>
+
+            <TextView
+                android:id="@+id/titleDatosAcademicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fotoPerfil"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Datos Académicos"
+                android:textColor="@color/primaryText"
+                />
+
+            <TextView
+                android:id="@+id/textDatospt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleDatosAcademicos"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/secondText"
+                android:text="2001-2015: Bachiller en Economía y Gestión de las Organizaciones en Escuela Incorporada Modelo José Manuel Estrada."/>
+
+            <TextView
+                android:id="@+id/textDatospt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDatospt1"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/secondText"
+                android:text="2016-Actualidad: Tecnicatura Superior en Programación en Universidad
+Tecnológica Nacional de Haedo."/>
+
+            <ImageView
+                android:id="@+id/imgUTN"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/utn"
+                android:layout_below="@+id/textDatospt1"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/titleAptitud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgUTN"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Aptitudes"
+                android:textColor="@color/primaryText"
+                />
+
+                <TextView
+                    android:id="@+id/textApt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleAptitud"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Buena comunicación y trabajo en equipo."
+                    android:textColor="@color/secondText"/>
+
+            <TextView
+                android:id="@+id/textApt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textApt1"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Capacidad de análisis y resolución de problemas. "
+                android:textColor="@color/secondText"/>
+
+            <TextView
+                android:id="@+id/textApt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textApt2"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Interés por el crecimiento profesional."
+                android:textColor="@color/secondText"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/textApt3"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/titleIdioma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textApt3"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/texticon"
+                android:text="Idiomas"/>
+
+            <ImageButton
+                android:id="@+id/buttonSpain"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/titleIdioma"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:src="@mipmap/ic_spain"/>
+
+            <ImageButton
+                android:id="@+id/buttonBritish"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/titleIdioma"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/colorPrimaryDark"
+                android:src="@mipmap/ic_british"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/groupFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-8dp"
+        app:fab_addButtonColorNormal="@color/lightPrimaryColor"
+        app:fab_addButtonColorPressed="@color/lightPrimaryColor">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FABfacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@mipmap/ic_facebook"
+            app:fab_colorNormal="@color/background"
+            app:fab_size="mini"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FABlinkdin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@mipmap/ic_linkdin"
+            app:fab_colorNormal="@color/background"
+            app:fab_size="mini"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FABgmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@mipmap/ic_gmail"
+            app:fab_colorNormal="@color/background"
+            app:fab_size="mini"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FABgithub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@mipmap/ic_github"
+            app:fab_colorNormal="@color/background"
+            app:fab_size="mini"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
