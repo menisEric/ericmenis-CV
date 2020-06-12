@@ -18,23 +18,42 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity{
 
-    private FloatingActionsMenu groupButton;
+    //FloatingActionsButton
+    @BindView(R.id.groupFAB)
+    FloatingActionsMenu groupButton;
+    @BindView(R.id.FABfacebook)
+    FloatingActionButton fabFacebook;
+    @BindView(R.id.FABgmail)
+    FloatingActionButton fabGmail;
+    @BindView(R.id.FABgithub)
+    FloatingActionButton fabGithub;
+    @BindView(R.id.FABlinkdin)
+    FloatingActionButton fabLinkdin;
 
-    private FloatingActionButton fabFacebook, fabGmail, fabGithub, fabLinkdin;
+    //ImageButton
+    @BindView(R.id.buttonBritish)
+    ImageButton imageBritish;
+    @BindView(R.id.buttonSpain)
+    ImageButton imageSpain;
 
-    private ImageButton imageSpain, imageBritish;
+    @OnClick(R.id.buttonBritish)
+    void ClickedEN(){
+        buttonBritish();
+    }
+    @OnClick(R.id.buttonSpain)
+    void ClickedES(){
+        buttonSpain();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fabFacebook = (FloatingActionButton) findViewById(R.id.FABfacebook);
-        fabGithub = (FloatingActionButton) findViewById(R.id.FABgithub);
-        fabGmail = (FloatingActionButton) findViewById(R.id.FABgmail);
-        fabLinkdin = (FloatingActionButton) findViewById(R.id.FABlinkdin);
+        //Libreria ButterKnife
+        ButterKnife.bind(this);
 
-        //Intent redes sociales
+        //redes sociales
         fabFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,25 +79,9 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        //Cuadros de Dialogo
-        imageBritish = (ImageButton) findViewById(R.id.buttonBritish);
-        imageSpain = (ImageButton) findViewById(R.id.buttonSpain);
-
-        imageSpain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonSpain();
-            }
-        });
-
-        imageBritish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonBritish();
-            }
-        });
     }
-
+    
+    //Cuadro de Dialogo
     private void buttonBritish() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Idioma");
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity{
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
+    //Cuadro de Dialogo
     private void buttonSpain() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Idioma");
@@ -96,28 +99,31 @@ public class MainActivity extends AppCompatActivity{
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    
+    //Intent Redes Sociales
 
+    //Facebook
     public void FacebookIntent(){
         String url = "https://www.facebook.com/eric.menis.3/";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
-
+    //Linkdin
     public void LinkdinIntent(){
         String url = "https://www.linkedin.com/in/eric-menis-990837162/";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
-
+    //Github
     public void GithubIntent(){
         String url = "https://github.com/menisEric";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
-
+    //Gmail
     public void GmailIntent(){
         String mailList = "ericmenistr@gmail.com";
         String[] mail = mailList.split(",");
